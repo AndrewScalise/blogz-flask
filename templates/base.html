@@ -1,57 +1,22 @@
 <!DOCTYPE html>
+
 <html>
     <head>
-        <title>Blog</title>
-        <style type="text/css">
-            .error {
-                color: red;
-            }
-            body {
-                font-family: sans-serif;
-                width: 800px;
-                margin: 0 auto;
-                padding: 10px;
-            }
-            label {
-                display: block;
-                font-size: 20px;
-            }
-            input[type=text] {
-                width: 400px;
-                font-size: 20px;
-                padding: 2px;
-            }
-            textarea {
-                width: 400px;
-                height: 200px;
-                font-size: 17px;
-                font-family: monospace;
-            }
-            input[type=submit] {
-                font-size: 24px;
-            }
-            .blog {
-                margin-top: 20px;
-            }
-            .blog-title {
-                font-weight: bold;
-                font-size: 20px;
-            }
-            .blog-body {
-                margin: 0;
-                font-size: 17px;
-            }
-        </style>
+        <title>Blogz</title>
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
-
-        <p> <a href="/">Main Blog Page</a>  <a style="padding-left:20px" href="/newblog">Add a Blog Entry</a></p>
-        <br>
-
-
-
+        <nav>
+            <ul>
+                <li><a href="/index">home</a></li>
+                <li><a href="/blog">all posts</a></li>
+                <li><a href="/newpost">new post</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
         {% block content %}
         {% endblock %}
-
     </body>
 </html>

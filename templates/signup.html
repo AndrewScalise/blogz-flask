@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    .error{
+        color:red;
+    }
+</style>
+
+<form action="/signup" method="post">
+    <table>
+        <tr>
+            <td align="left">Username</td>
+            <td align="left"><input type="text" name="username" value={{username}}></td>
+            <td>
+
+                <div class='error'>{{ error1 }}</div>
+                <div class='error'>{{ error2 }}</div>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td align="left">Password</td>
+            <td align="left"><input type="password" name="password"/></td>
+            <td>
+                <div class='error'>{{ error3 }}</div>
+                <div class='error'>{{ error4 }}</div>
+            </td>
+        </tr>
+
+        <tr>
+            <td align="left">Verify Password</td>
+            <td align="left"><input type="password" name="verifypassword"/></td>
+            <td>
+                <div class='error'>{{ error5 }}</div>
+                <div class='error'>{{ error6 }}</div>
+            </td>
+        </tr>
+
+
+    </table>
+
+    <input type="submit" value="Submit"/>
+</form>
+
+<p class='error'>{{user_exists_error}}<p>
+
+
+{% endblock %}
